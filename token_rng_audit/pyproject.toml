@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "token-rng-audit"
+version = "1.0.0"
+description = "授权渗透测试用的令牌（重置链接/会话 ID）随机性评估工具，纯标准库实现"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Security Testing" }]
+keywords = ["security", "pentest", "token", "randomness", "entropy", "rng"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Operating System :: OS Independent",
+]
+# 纯标准库，无运行时依赖
+dependencies = []
+
+[project.scripts]
+token-rng-audit = "token_rng_audit.cli:main"
+
+[tool.setuptools]
+packages = ["token_rng_audit"]
